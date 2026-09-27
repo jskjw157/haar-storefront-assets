@@ -115,7 +115,9 @@
     if (link) {
       link.href = LOGIN_URL;
       link.setAttribute('data-href', LOGIN_URL);
-      link.textContent = BANNER_TEXT;
+      if (link.textContent !== BANNER_TEXT) {
+        link.textContent = BANNER_TEXT;
+      }
       link.style.color = '#ffffff';
     }
 
